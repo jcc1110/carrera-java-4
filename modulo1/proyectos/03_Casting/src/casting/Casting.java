@@ -9,7 +9,7 @@ public class Casting {
         Byte b = 10;
         Double c = 12.9458957;
         
-        // CASTING PRIMITIVOS Y REFERENCIALES        
+        // CASTING PRIMITIVOS Y REFERENCIALES
         // IMPLICITOS
         Short aConvertido = (short)a;
         Long bConvertido = b.longValue();

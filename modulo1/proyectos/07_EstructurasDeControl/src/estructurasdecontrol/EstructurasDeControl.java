@@ -11,7 +11,7 @@ public class EstructurasDeControl {
         Scanner scan = new Scanner(System.in);
         
         // SOLICITO EL DATO AL USUARIO
-        System.out.print("Introduzca un número correspondiente a un día de la semana: ");
+        System.out.print("Introduzca un número de un día de la semana: ");
         
         // CAPTURO EL VALOR INGRESADO
         dia = scan.nextInt();

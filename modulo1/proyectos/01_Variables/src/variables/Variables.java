@@ -15,8 +15,8 @@ public class Variables {
         // PRESENTACIÓN DE LOS VALORES
         System.out.println("El valor de mi variable global es: " + a);
         System.out.println("El valor de mi variable global es: " + b);
-        System.out.println("El valor de mi variable referencial es: " + c);
         System.out.println("El valor de mi constante es: " + PI);
+        System.out.println("El valor de mi variable referencial es: " + c);
         
         // MODIFICACIÓN DE LA VARIABLE GLOBAL
         a = 12;

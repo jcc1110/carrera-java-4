@@ -11,7 +11,7 @@ public class Operadores {
         /**
          * UTILIZANDO EL OPERADOR *= NOS SIRVE PARA
          * MULTIPLICAR DE LA SIGUIENTE FORMA
-         * (VALOR_ACTUAL * VALOR_ACTUK)
+         * (VALOR_ACTUAL * VALOR_ACTUAL)
          * */
         c *= c;
         
@@ -22,6 +22,6 @@ public class Operadores {
         System.out.println("División: " + (a / b));
         System.out.println("Módulo: " + (a % b));
         System.out.println("Resultado multiplicado: " + c);
-        System.out.println("Cálculo del IVA (12%): " + (a + b + c) * 12 / 100);       
+        System.out.println("Cálculo del IVA (12%): " + (a + b + c) * 12 / 100);
     }
 }

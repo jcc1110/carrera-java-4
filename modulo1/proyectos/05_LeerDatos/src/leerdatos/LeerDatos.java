@@ -1,4 +1,5 @@
 package leerdatos;
+import java.util.Scanner;
 
 public class LeerDatos {
     public static void main(String[] args) {
@@ -8,16 +9,16 @@ public class LeerDatos {
         String nombre;
         
         // INSTANCIA DE LA CLASE Scanner
-        java.util.Scanner scan = new java.util.Scanner(System.in);
+        Scanner scan = new Scanner(System.in);
         
         // SOLICITO POR PANTALLA EL NOMBRE DEL USUARIO
         System.out.print("Dame tu nombre: ");
         
         // CAPTURO EL DATO INGRESADO POR EL USUARIO
         nombre = scan.next();
-        /*if (!nombre.matches("[a-zA-Z]+")) {
+        if (!nombre.matches("[a-zA-Z]+")) {
             System.out.println("El nombre solo debe contener letras");
-        }*/
+        }
         
         // SOLICITO POR PANTALLA LA EDAD DEL USUARIO
         System.out.print("Dame tu edad: ");
