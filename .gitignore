@@ -1,0 +1,11 @@
+### NetBeans ###
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
+nbactions.xml
+*/nbproject/private/
+/modulo1/proyectos/E_ProyectoIMC/nbproject/private/
+/modulo1/proyectos/05_LeerDatos/nbproject/private/
