@@ -18,8 +18,8 @@ public class Clases {
         System.out.println(p2.cumpleanos);
         System.out.println(p2.obtenerNombreCompleto());
         System.out.println(p2.obtenerEdad());
-        System.out.println(""); 
-        
+        System.out.println("");
+                
         // PREGUNTO LOS VALORES NECESARIOS
         System.out.print("Indique su nombre: ");
         p1.nombre = scan.next();        
@@ -31,12 +31,7 @@ public class Clases {
         mayus = scan.next();
         
         // VALIDO LA OPCIÓN
-        esMayus = ("S".equals(mayus)) ? true : false;        
-        /*if ("S".equals(mayus)) {
-            esMayus = true;
-        } else {
-            esMayus = false;
-        }*/
+        esMayus = ("S".equals(mayus));
         
         // MUESTRO LOS VALORES
         System.out.println("");

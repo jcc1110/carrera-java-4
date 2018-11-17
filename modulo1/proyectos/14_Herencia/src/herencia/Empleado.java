@@ -5,21 +5,25 @@ public class Empleado extends Persona {
     private int sueldo;
         
     // MÉTODOS
-    public String getSueldo() {
-        String formato = "El sueldo de "+ super.getNombre();
-        formato += ", " + super.getApellido();
-        formato += " es Bs. " + this.sueldo;
-        return formato.toUpperCase();
+    public String getSueldo() {        
+        StringBuilder sb = new StringBuilder();
+        sb.append("El sueldo de ");
+        sb.append(super.getNombre());
+        sb.append(", ");
+        sb.append(super.getApellido());
+        sb.append(" es Bs. ");
+        sb.append(this.sueldo);
+        return sb.toString().toUpperCase();
     }
     
     public String setSueldo(int _sueldo) {
-        String mensaje = "";
-        if (_sueldo <= 10) {
+        String mensaje;
+        if (_sueldo <= 1800) {
             this.sueldo = _sueldo;
             mensaje = "Sueldo actualizado con éxito";
         } else {
             this.sueldo = 0;
-            mensaje = "El sueldo no puedo ser superior a los Bs. 10,00";
+            mensaje = "El sueldo no puedo ser superior a los BsS. 1.800";
         }
         return mensaje;
     }

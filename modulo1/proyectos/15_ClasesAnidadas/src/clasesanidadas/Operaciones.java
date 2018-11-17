@@ -47,6 +47,7 @@ public class Operaciones {
             // IMPRIMO UN VALOR
             System.out.println("Clase externa: " + op.d);            
             
+            // REALIZO LA SUMA
             return this.getA() + this.getB();
         }
         

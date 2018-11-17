@@ -4,14 +4,14 @@ public class Persona {
     // ATRIBUTOS
     private String nombre;
     private String apellido;
-    private int edad;
+    private int edad;    
 
     // CONSTRUCTOR
     public Persona(String nombre, String apellido, int edad) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.edad = edad;
-    }
+    }    
     
     public String nombreCompleto() {
         return this.getNombre() + " " + this.getApellido() + " tiene " + this.getEdad() + " años";

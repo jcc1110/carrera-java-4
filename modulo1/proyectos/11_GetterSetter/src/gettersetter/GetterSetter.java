@@ -3,7 +3,7 @@ package gettersetter;
 public class GetterSetter {
     public static void main(String[] args) {
         // INSTANCIA DE MI CLASE Persona
-        Persona persona = new Persona("Anthony","Hurtado",27);
+        Persona persona = new Persona("Anthony", "Hurtado", 27);
 
         // PRESENTO LOS DATOS
         System.out.println(persona.getNombre());
