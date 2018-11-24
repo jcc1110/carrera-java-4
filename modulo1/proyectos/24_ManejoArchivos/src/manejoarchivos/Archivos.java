@@ -19,15 +19,14 @@ public class Archivos {
             File archivo = new File(ruta);
             
             // UTILIZO LAS CLASES PrintWriter Y FileWriter
-            PrintWriter salida = new PrintWriter(new FileWriter(archivo));
+            PrintWriter pw = new PrintWriter(new FileWriter(archivo));
             
             // CIERRO LA CONEXIÓN
-            salida.close();
+            pw.close();
             
             // IMPRIMO UN MENSAJE
             System.out.println("El archivo se ha creado correctamente.");
         } catch (IOException ex) {
-            // CAPTURANDO LA EXCEPCIÓN
             System.out.println(ex.getMessage());
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
@@ -41,19 +40,18 @@ public class Archivos {
             File archivo = new File(ruta);
             
             // UTILIZO LAS CLASES PrintWriter y FileWriter
-            PrintWriter salida = new PrintWriter(new FileWriter(archivo));
+            PrintWriter pw = new PrintWriter(new FileWriter(archivo));
             
             // ESCRIBO POR PRIMERA VEZ EN EL ARCHIVO
-            salida.println(texto);
-            salida.println("Fin de escritura");
+            pw.println(texto);
+            pw.println("----");
             
             // CIERRO LA CONEXIÓN
-            salida.close();
+            pw.close();
             
             // IMPRIMO UN MENSAJE
             System.out.println("Se ha escrito correctamente al archivo.");
         } catch (IOException ex) {
-            // CAPTURANDO LA EXCEPCIÓN
             System.out.println(ex.getMessage());
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
@@ -67,23 +65,22 @@ public class Archivos {
             File archivo = new File(ruta);
             
             // UTILIZO LAS CLASES BufferedRead y FileReader
-            BufferedReader entrada = new BufferedReader(new FileReader(archivo));
+            BufferedReader br = new BufferedReader(new FileReader(archivo));
             
             // LEO LA INFORMACIÓN DEL ARCHIVO
             String lectura;
-            lectura = entrada.readLine();
+            lectura = br.readLine();
             while (lectura != null) {
                 System.out.println("Lectura: " + lectura);
-                lectura = entrada.readLine();
+                lectura = br.readLine();
             }
             
             // CIERRO LA CONEXIÓN
-            entrada.close();
+            br.close();
             
             // IMPRIMO UN MENSAJE
             System.out.println("Se ha leido el archivo correctamente.");
         } catch (IOException ex) {
-            // CAPTURANDO LA EXCEPCIÓN
             System.out.println(ex.getMessage());
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
@@ -97,19 +94,18 @@ public class Archivos {
             File archivo = new File(ruta);
             
             // UTILIZO LAS CLASES PrintWriter y FileWriter
-            PrintWriter salida = new PrintWriter(new FileWriter(archivo, true));
+            PrintWriter pw = new PrintWriter(new FileWriter(archivo, true));
             
             // AÑADO LA INFORMACIÓN NECESARIA
-            salida.println(texto);
-            salida.println("Fin de anexar");
+            pw.println(texto);
+            pw.println("----");
             
             // CIERRO LA CONEXIÓN
-            salida.close();
+            pw.close();
             
             // IMPRIMO UN MENSAJE
             System.out.println("Se ha anexado información correctamente");
         } catch (IOException ex) {
-            // CAPTURANDO LA EXCEPCIÓN
             System.out.println(ex.getMessage());
         } catch (Exception ex) {
             System.out.println(ex.getMessage());

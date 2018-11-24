@@ -4,7 +4,7 @@ import java.util.concurrent.ForkJoinPool;
 
 public class ForkJoinFramework {
     public static void main(String[] args) {
-        // Variables necesarias
+        // VARIABLES NECESARIAS
         int[] numerosASumar = new int[200];
         long resultado;
         

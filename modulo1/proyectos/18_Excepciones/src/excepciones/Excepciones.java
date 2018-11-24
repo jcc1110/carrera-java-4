@@ -23,7 +23,7 @@ public class Excepciones {
             System.out.println(me.getMessage());
             
             // Imprimo la ruta completa del error de principio a fin.
-            // me.printStackTrace();
+            //me.printStackTrace();
         } catch(Exception ex) {
             System.out.println(ex.getMessage());
         } finally {

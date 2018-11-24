@@ -33,12 +33,12 @@ public class ManejoColecciones {
     public static void recorrer(Collection coleccion) {        
         // PROGRAMACIÓN FUNCIONAL
         coleccion.forEach(elemento -> System.out.println(elemento.toString().toUpperCase()));
-        coleccion.forEach(System.out::println);
+        //coleccion.forEach(System.out::println);
         
         // PROGRAMACIÓN IMPERATIVA
-        for(Object elemento : coleccion) {
+        /*for(Object elemento : coleccion) {
             System.out.println(elemento);
-        }
+        }*/
         System.out.println("");
     }
 }

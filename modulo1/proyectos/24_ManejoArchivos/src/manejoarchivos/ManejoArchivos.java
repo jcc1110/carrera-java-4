@@ -18,7 +18,7 @@ public class ManejoArchivos {
         crear(ruta);
         System.out.println("");
         
-        escribir(ruta, "Contenido a escribir en el archivo");
+        escribir(ruta, "Lorem ipsum lorem ipsum");
         System.out.println("");
         
         leer(ruta);

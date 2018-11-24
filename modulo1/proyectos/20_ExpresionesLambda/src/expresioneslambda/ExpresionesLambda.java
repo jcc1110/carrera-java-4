@@ -11,14 +11,7 @@ public class ExpresionesLambda {
         System.out.println("Resultado: " + resultado);
         
         // USO DE LA EXPRESIÓN LAMBDA
-        /*Operacion op = (int a, int b) -> {
-            int result;
-            result = (a + b) / 2;
-            return result;
-        };*/
-        Operacion op = (a, b) -> (a + b)/2;
-        
-        // OPERACIÓN Y MUESTRA DE LOS DATOS
+        Operacion op = (x, y) -> x + y * 14;
         resultado = op.sumar(3, 2);
         System.out.println("Resultado (Lambda): " + resultado);
     }

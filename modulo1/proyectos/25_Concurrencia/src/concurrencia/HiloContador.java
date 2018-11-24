@@ -22,11 +22,11 @@ public class HiloContador extends Thread {
                 int valorContador;
                 
                 // DECORADOR PARA SINCRONIZAR LA EJECUCIÓN DE LOS HIJOS
-                // synchronized(this.contador) {
+                synchronized(this.contador) {
                     // OBTENGO EL VALOR ACTUAL DEL OBJETO
                     valorContador = this.contador.getContador();
                     
-                    // DETENGO POR UN 1 MILISEGUNDO LA EJECUCIÓN DEL HIJO
+                    // DETENGO POR UN 500 MILISEGUNDO LA EJECUCIÓN DEL HIJO
                     Thread.sleep(500);
                     
                     // ESTABLEZCO EL VALOR DE LA PROPIEDAD
@@ -37,10 +37,9 @@ public class HiloContador extends Thread {
                     mensaje += "Prioridad: "+ super.getPriority() +" / ";
                     mensaje += "Contador: "+ valorContador;
                     System.out.println(mensaje);
-                //}
+                }
             }
         } catch (InterruptedException e) {
-            // MUESTRO EL MENSAJE DE LA EXCEPCIÓN PRODUCIDA
             System.out.println(e.getMessage());
         } catch (Exception ex) {
             System.out.println(ex.getMessage());

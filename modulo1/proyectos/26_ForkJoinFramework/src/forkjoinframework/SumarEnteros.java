@@ -48,7 +48,6 @@ public class SumarEnteros extends RecursiveTask<Long> {
                 // Sumo los números
                 this.suma += parte[i];
             } catch (Exception ex) {
-                // Muestro la excepción en caso de producirse
                 System.out.println(ex.getMessage());
             }
             
@@ -59,7 +58,7 @@ public class SumarEnteros extends RecursiveTask<Long> {
         // Le pido a mi subtarea que me regrese su resultado y se lo sumo a la cuenta que llevo
         if(subTarea != null) {
             // Resultado -> Error
-            //this.suma += subTarea.join();
+            // this.suma += subTarea.join();
             
             // Resultado -> Exception
             try {
