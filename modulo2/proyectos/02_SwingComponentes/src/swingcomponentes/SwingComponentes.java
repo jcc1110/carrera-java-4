@@ -23,7 +23,7 @@ public class SwingComponentes {
         // CREANDO LOS COMPONENTES
         JLabel etiqueta = new JLabel("Nombre: ");
         JTextField texto = new JTextField(20);
-        JButton boton = new JButton("Saludar");
+        JButton boton = new JButton("Saludar");        
         
         // AÑADIENDO LOS COMPONENTES A LA INTERFAZ
         cp.add(etiqueta);

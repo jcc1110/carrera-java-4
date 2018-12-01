@@ -14,14 +14,14 @@ public class Localizacion {
         System.out.println("");
         
         // ESTABLECIENDO LA LOCALIDAD
-        Locale locale = new Locale("en","US");
+        Locale locale = new Locale("es","VE");
         Locale.setDefault(locale);
         
         // OBTENIENDO EL Locale POR DEFECTO
         Locale lc = Locale.getDefault();
         
         // MOSTRANDO LOS VALORES
-        System.out.println("Información del Locale actual:");
+        System.out.println("Información del Locale actual");
         System.out.println("Código del país: " + lc.getCountry());
         System.out.println("Código del lenguaje: " + lc.getLanguage());
         System.out.println("País: " + lc.getDisplayCountry());
@@ -35,7 +35,7 @@ public class Localizacion {
         // FORMATEANDO LAS FECHAS
         System.out.println("Formateando las fechas con Locale");
         DateTimeFormatter fDay = DateTimeFormatter.ofPattern("EEEE");
-        DateTimeFormatter fMonth = DateTimeFormatter.ofPattern("MMMM", Locale.CHINESE);
+        DateTimeFormatter fMonth = DateTimeFormatter.ofPattern("MMMM", Locale.ITALIAN);
         System.out.println("Día: " + LocalDate.now().format(fDay));
         System.out.println("Mes: " + LocalDate.now().format(fMonth));
     }    

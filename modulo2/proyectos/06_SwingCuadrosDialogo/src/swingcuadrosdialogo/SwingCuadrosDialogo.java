@@ -51,7 +51,11 @@ public class SwingCuadrosDialogo {
         avisos.addActionListener(eventoAvisos);
         
         ActionListener eventoConfirmar = e -> {
-            String nombre = JOptionPane.showInputDialog(confirmar, "¿Cuál es tu nombre?", "Anthony");
+            String nombre = JOptionPane.showInputDialog(
+                confirmar, 
+                "¿Cuál es tu nombre?", 
+                "Anthony"
+            );
             System.out.println(nombre);
         };
         confirmar.addActionListener(eventoConfirmar);
@@ -61,7 +65,7 @@ public class SwingCuadrosDialogo {
                 confirmar2, 
                 "¿Esta seguro/a de realizar esta acción?", 
                 "Acción a realizar", 
-                JOptionPane.YES_NO_CANCEL_OPTION, 
+                JOptionPane.YES_NO_OPTION, 
                 JOptionPane.WARNING_MESSAGE);
             System.out.println(respuesta);
         };

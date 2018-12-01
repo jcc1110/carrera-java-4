@@ -20,12 +20,12 @@ public class SwingLayoutManager {
         Container cp = f.getContentPane();
         
         // ESTILOS DE Layout Manager
-        FlowLayout fl = new FlowLayout(FlowLayout.LEFT);
+        FlowLayout fl = new FlowLayout(FlowLayout.CENTER);
         GridLayout gl = new GridLayout(0, 3, 10, 10);
         BorderLayout bl = new BorderLayout();
         
         // LAYOUT A UTILIZAR
-        cp.setLayout(bl);
+        cp.setLayout(fl);
         
         // COMPONENTES PARA LA NUEVA VENTANA
         JLabel etiqueta1 = new JLabel("Nombre:");
@@ -36,7 +36,7 @@ public class SwingLayoutManager {
         // AÑADO MIS COMPONENTES A LA VENTANA
         cp.add(etiqueta1, BorderLayout.NORTH);
         cp.add(texto, BorderLayout.SOUTH);
-        cp.add(boton, BorderLayout.EAST);
-        cp.add(etiqueta2, BorderLayout.WEST);
+        cp.add(boton, BorderLayout.WEST);
+        cp.add(etiqueta2, BorderLayout.EAST);
     }
 }

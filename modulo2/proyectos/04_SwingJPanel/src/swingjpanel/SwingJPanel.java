@@ -13,13 +13,13 @@ public class SwingJPanel {
     public static void main(String[] args) {
         // CREO MI VENTANA
         JFrame f = new JFrame("Añadir Usuario");
-        f.setSize(200, 200);
+        f.setSize(500, 150);
         f.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         f.setVisible(true);
 
         // PANEL DE FECHA
         JPanel panelFecha = new JPanel();
-        panelFecha.setLayout(new FlowLayout());
+        panelFecha.setLayout(new FlowLayout(FlowLayout.LEFT));
         panelFecha.add(new JTextField(2));
         panelFecha.add(new JLabel("/"));
         panelFecha.add(new JTextField(2));

@@ -13,7 +13,7 @@ public class Sol extends JPanel {
         g.fillOval(100, 100, 200, 200);
         
         // CREANDO LAS LINEAS
-        for (double i=0; i< (2 * Math.PI); i+=0.1) {
+        for (double i=0; i<(2 * Math.PI); i+=0.1) {
             int xEnd = (int)(200 + 150 * Math.cos(i));
             int yEnd = (int)(200 + 150 * Math.sin(i));
             g.drawLine(200, 200, xEnd, yEnd);

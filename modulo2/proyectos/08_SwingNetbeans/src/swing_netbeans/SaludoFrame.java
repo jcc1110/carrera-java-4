@@ -30,43 +30,30 @@ public class SaludoFrame extends javax.swing.JFrame {
     private void initComponents() {
 
         jLabel1 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        TextoRecibido = new javax.swing.JTextField();
+        BotonSaludar = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Saludando");
 
         jLabel1.setText("Indique su nombre:");
 
-        jTextField1.addKeyListener(new java.awt.event.KeyAdapter() {
+        TextoRecibido.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                jTextField1KeyPressed(evt);
+                TextoRecibidoKeyPressed(evt);
             }
         });
 
-        jButton1.setText("Saludar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        BotonSaludar.setText("Relizar saludo");
+        BotonSaludar.setToolTipText("Acción de saludar");
+        BotonSaludar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                BotonSaludarActionPerformed(evt);
             }
         });
 
         jLabel2.setText("...");
-
-        jPanel1.setBackground(java.awt.Color.pink);
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -79,10 +66,9 @@ public class SaludoFrame extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jLabel1)
                         .addGap(18, 18, 18)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(TextoRecibido, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE))
-                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(BotonSaludar, javax.swing.GroupLayout.DEFAULT_SIZE, 167, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -91,26 +77,24 @@ public class SaludoFrame extends javax.swing.JFrame {
                 .addGap(19, 19, 19)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                    .addComponent(TextoRecibido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(BotonSaludar))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String nombre = "Hola, " + this.jTextField1.getText();
-        JOptionPane.showMessageDialog(jButton1, nombre);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void BotonSaludarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BotonSaludarActionPerformed
+        String nombre = "Hola, " + this.TextoRecibido.getText();
+        JOptionPane.showMessageDialog(BotonSaludar, nombre);
+    }//GEN-LAST:event_BotonSaludarActionPerformed
 
-    private void jTextField1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTextField1KeyPressed
-        this.jLabel2.setText(this.jTextField1.getText());
-    }//GEN-LAST:event_jTextField1KeyPressed
+    private void TextoRecibidoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TextoRecibidoKeyPressed
+        this.jLabel2.setText(this.TextoRecibido.getText());
+    }//GEN-LAST:event_TextoRecibidoKeyPressed
 
     /**
      * @param args the command line arguments
@@ -148,10 +132,9 @@ public class SaludoFrame extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton BotonSaludar;
+    private javax.swing.JTextField TextoRecibido;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

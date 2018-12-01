@@ -29,22 +29,16 @@ public class SwingEventos {
         JTextField texto = new JTextField(20);
         JButton boton = new JButton("Saludar");
         
-        // IMPLEMENTACIÓN TRADICIONAL 1
+        // IMPLEMENTACIÓN TRADICIONAL
         //boton.addActionListener(new ManejoEvento(texto));
-        
-        // IMPLEMENTACIÓN TRADICIONAL 2
-        /*boton.addActionListener(new ManejoEvento() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                String mensaje;
-                String valor = texto.getText();
-                mensaje = (!valor.isEmpty()) ? "Hola, " + valor : "¡Hola mundo!";  
-                JOptionPane.showMessageDialog(boton, mensaje);
-            }
-        });*/
         
         // IMPLEMENTACIÓN DE LA INTEFAZ REQUERIDA
         ActionListener manejoEvento = e -> {
+            System.out.println(e.getActionCommand());
+            System.out.println(e.getModifiers());
+            System.out.println(e.getClass());
+            System.out.println(e.getWhen());
+            
             String mensaje;
             String valor = texto.getText();
             mensaje = (!valor.isEmpty()) ? "Hola, " + valor : "¡Hola mundo!";  

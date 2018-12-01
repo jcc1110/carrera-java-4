@@ -13,14 +13,16 @@ public class Conexion {
             Class.forName("com.mysql.jdbc.Driver");
 
             // REALIZANDO LA CONEXIÓN A LA BASE DE DATOS
-            Connection con = DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/prueba2", "root", "root");
+            Connection con = DriverManager.getConnection(
+                "jdbc:mysql://127.0.0.1:3306/prueba", "root", "root");
             System.out.println("Conexión exitosa");
 
             // PREPARANDO UNA CONSULTA
             Statement sta = con.createStatement();
             
             // CREANDO UN NUEVO REGISTRO EN LA BASE DE DATOS
-            int resultado = sta.executeUpdate("INSERT INTO usuario (id, nombre, clave) VALUES (2, 'pedro', '123456789')");
+            int resultado = sta.executeUpdate(
+                "INSERT INTO usuario (id, usuario, clave) VALUES (3, 'adolfo', '123456789')");
             System.out.println("Resultado: " + resultado);             
             
             // CONSULTA A LA BASE DE DATOS
@@ -31,7 +33,7 @@ public class Conexion {
                 // IMPRIMIENTO CADA REGISTRO
                 System.out.println(
                     rs.getInt("id") + " - " + 
-                    rs.getString("nombre") + " - " + 
+                    rs.getString("usuario") + " - " + 
                     rs.getString("clave")
                 );
             }            
