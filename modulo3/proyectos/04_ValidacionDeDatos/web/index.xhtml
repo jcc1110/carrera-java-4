@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Validación de Datos</title>
+        <style>
+            .formato, 
+            #javax_faces_developmentstage_messages li { 
+                color: red !important;
+                margin-left: 3px;
+                border: 1px solid gray;
+                border-radius: 5%;
+                padding: 2px;
+            }
+        </style>
+    </h:head>
+    <h:body>
+        <h1>Información de la Persona</h1>
+        <hr />
+        <h:form>
+            <!-- NOMBRE -->
+            <h:outputLabel value="Nombre: " />
+            <h:inputText id="txtName" value="#{ persona.nombre }" label="Nombre">
+                <f:validateLength minimum="3" maximum="10" />
+            </h:inputText>
+            <h:message for="txtName" class="formato" />
+
+            <!-- EDAD -->
+            <br/>
+            <h:outputLabel value="Edad: " />
+            <h:inputText id="txtAge" value="#{ persona.edad }" label="Edad">
+                <f:validateLongRange minimum="18" maximum="50" />
+            </h:inputText>
+            <h:message for="txtAge" class="formato" />
+
+            <!-- SALARIO -->
+            <br/>
+            <h:outputLabel value="Salario: " />
+            <h:inputText id="txtSalary" value="#{ persona.salario }" label="Salario">
+                <f:validateDoubleRange minimum="100.00" maximum="500.00" />
+            </h:inputText>
+            <h:message for="txtSalary" class="formato" />
+
+            <!-- CORREO -->
+            <br/>
+            <h:outputLabel value="Correo electrónico: " />
+            <h:inputText id="txtEmail" value="#{ persona.correo }" label="Correo electrónico" 
+                         validatorMessage="Correo electrónico inválido">
+                <f:validateRegex pattern="^\S+@\S+.\S+$" />
+            </h:inputText>
+            <h:message for="txtEmail" class="formato" />
+
+            <!-- SITIO WEB -->
+            <br/>
+            <h:outputLabel value="Sitio web: " />
+            <h:inputText id="txtURL" value="#{ persona.web }" label="Sitio Web">
+                <f:validateRequired />
+                <f:validator validatorId="com.structures.UrlValidator" />
+            </h:inputText>
+
+            <br/>
+            <h:commandButton value="Enviar" action="resultado"/>
+        </h:form>
+    </h:body>
+</html>

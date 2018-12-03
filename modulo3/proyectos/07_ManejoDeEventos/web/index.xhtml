@@ -1,0 +1,61 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Manejo de Eventos</title>
+    </h:head>
+    <h:body>        
+        <h1>ValueChangeListener</h1>
+        <h:panelGrid columns="2">
+            <h:form>            
+                <h2>Method Binding</h2>
+                <h:panelGrid columns="2">
+                    Seleccionar:
+                    <h:selectOneMenu 
+                        value="#{ cl.paisSeleccionado }" 
+                        onchange="submit()" 
+                        valueChangeListener="#{ cl.cambioDePais }">
+                        <f:selectItems value="#{ cl.paises }" />
+                    </h:selectOneMenu>
+                    Nombre del país:
+                    <h:outputText value="#{ cl.paisSeleccionado }"/>
+                </h:panelGrid>
+            </h:form>
+            <h:form>
+                <h2>Interface</h2>
+                <h:panelGrid columns="2">
+                    Seleccionar:
+                    <h:selectOneMenu 
+                        value="#{ cl.paisSeleccionado }" 
+                        onchange="submit()">
+                        <f:valueChangeListener type="com.events.LocaleChangeListener" />
+                        <f:selectItems value="#{ cl.paises }" />
+                    </h:selectOneMenu>
+                    Nombre del país:
+                    <h:outputText value="#{ cl.paisSeleccionado }"/>
+                </h:panelGrid>
+            </h:form>
+        </h:panelGrid>
+
+        <hr/>
+        
+        <h1>ActionListener</h1>
+        <h:panelGrid columns="2">
+            <h:form>
+                <h2>Method Binding</h2>
+                <h:outputText value="#{ ab.nombre }" /><br/>
+                <h:commandButton value="Enviar" actionListener="#{ ab.updateNombreBinding }" />
+            </h:form>
+            <h:form>
+                <h2>Interface</h2>
+                <h:outputText id="txtNombre" value="#{ ab.nombre }" /><br/>
+                <h:commandButton value="Enviar" onclick="submit()">
+                    <f:actionListener type="com.events.UserActionListener" />
+                    <f:setPropertyActionListener target="#{ ab.nombre }" value="Pedro Perez" />
+                </h:commandButton>
+            </h:form>
+        </h:panelGrid>
+    </h:body>
+</html>

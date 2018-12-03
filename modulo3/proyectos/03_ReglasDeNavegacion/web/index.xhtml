@@ -1,0 +1,28 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html">
+    <h:head>
+        <title>Reglas de Navegación</title>
+    </h:head>
+    <h:body>
+        <h1>Reglas de Navegación</h1>
+        #{ sb.setNombre("Anthony Hurtado") }        
+        <h:form>
+        <ul>
+            <li>
+                <!-- Navegación Estática -->
+                <h:commandButton value="Página 1" action="page1.xhtml"/>
+            </li>
+            <li>
+                <!-- Navegación Dinámica -->
+                <h:commandButton value="Página 2" action="page2"/>
+            </li>
+            <li>
+                <!-- Navegación Dinámica -->
+                <h:commandButton value="Página 3" action="#{ sb.obtener() }"/>
+            </li>
+        </ul>
+        </h:form>
+    </h:body>
+</html>

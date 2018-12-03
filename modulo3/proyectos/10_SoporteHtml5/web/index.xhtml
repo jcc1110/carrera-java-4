@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:pt="http://xmlns.jcp.org/jsf/passthrough">
+    <h:head>
+        <title>Soporte para HTML 5</title>
+    </h:head>
+    <h:body>
+        <h1>Soporte para HTML 5</h1>
+        <hr/>
+        <h:form>
+            <h:panelGrid columns="2">
+                <h:outputText value="Fecha:" />
+                <h:inputText pt:type="date" pt:required="required" />
+                
+                <h:outputText value="Mes:" />
+                <h:inputText pt:type="month" pt:required="required" />
+                
+                <h:outputText value="Rango:" />
+                <h:inputText pt:type="range" pt:required="required" />
+                
+                <h:outputText value="Buscar:" />
+                <h:inputText pt:type="search" pt:required="required" />
+                
+                <h:outputText value="Tiempo:" />
+                <h:inputText pt:type="time" pt:required="required" />
+            
+                <h:outputText value="Número:" />
+                <h:inputText
+                    pt:type="number"
+                    pt:min="1"
+                    pt:max="30"
+                    pt:required="required" />
+                
+                <h:outputText value="Cantidad:" />
+                <h:inputText
+                    pt:type="number"
+                    pt:min="80"
+                    pt:max="120"
+                    pt:step="20"
+                    pt:required="required" />
+                
+                <h:commandButton pt:type="submit" value="Enviar" />
+            </h:panelGrid>
+        </h:form>
+    </h:body>
+</html>

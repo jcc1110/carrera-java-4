@@ -1,0 +1,66 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+        <title>Conversión de Datos</title>
+    </h:head>
+    <h:body>
+        <!-- ConvertNumber -->
+        <h2>ConvertNumber</h2>
+        <ol>
+            <li>
+                [minFractionDigits="2"]:
+                <h:outputText value="#{ persona.monto }">
+                    <f:convertNumber minFractionDigits="2" maxFractionDigits="3" />
+                </h:outputText>
+            </li>
+            <li>
+                [pattern="#0.0"]: 
+                <h:outputText value="#{ persona.monto }">
+                    <f:convertNumber pattern="#0.0" />
+                </h:outputText>
+            </li>
+            <li>
+                [currencySymbol="BS"]:
+                <h:outputText value="#{ persona.monto }">
+                    <f:convertNumber currencySymbol="BS" type="currency" />
+                </h:outputText>
+            </li>
+            <li>
+                [currencyCode="VEF"]: 
+                <h:outputText value="#{ persona.monto }">
+                    <f:convertNumber currencyCode="VEF" type="currency" />
+                </h:outputText>
+            </li>
+            <li>
+                [percent]:
+                <h:outputText value="#{ persona.monto }" >
+                    <f:convertNumber type="percent" />
+                </h:outputText>
+            </li>
+        </ol>   
+
+        <!-- ConvertDateTime -->
+        <h2>ConvertDateTime</h2>
+        <h:form>
+            <h:outputText value="Formato esperado: 12-01-2012"/><br/>
+            <h:inputText id="txtDate" value="#{ persona.fecha }" label="Fecha">
+                <f:convertDateTime pattern="dd-mm-yyyy" />
+            </h:inputText>
+            <h:commandButton value="Convertir" action="resultado"/>
+        </h:form>
+        <h:message for="txtDate" style="color:red" />     
+
+        <!-- Custom Converter -->
+        <h2>Convertidor Personalizado de URL</h2>
+        <h:form>
+            <h:inputText id="txtUrl" value="#{ persona.url }" label="URL">
+                <f:converter converterId="com.structures.UrlConverter" />
+            </h:inputText>		 
+            <h:commandButton value="Convertir" action="resultado"/>
+        </h:form>
+        <h:message for="txtUrl" style="color:red" />
+    </h:body>
+</html>

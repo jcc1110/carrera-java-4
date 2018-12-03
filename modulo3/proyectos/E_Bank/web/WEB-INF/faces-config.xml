@@ -1,0 +1,58 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<faces-config version="2.2"
+              xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_2.xsd">
+    
+    <!-- Apĺica para todas las vistas dentro del proyecto -->
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        
+        <!-- Navegación pública -->
+        <navigation-case>
+            <from-outcome>about</from-outcome>
+            <to-view-id>/index.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>service</from-outcome>
+            <to-view-id>/views/public/service.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>contact</from-outcome>
+            <to-view-id>/views/public/contact.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>login</from-outcome>
+            <to-view-id>/views/public/login.xhtml</to-view-id>
+        </navigation-case>
+        
+        <!-- Navegación privada -->
+        <navigation-case>
+            <from-outcome>dashboard</from-outcome>
+            <to-view-id>/views/private/dashboard.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>information</from-outcome>
+            <to-view-id>/views/private/information.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>membership</from-outcome>
+            <to-view-id>/views/private/membership.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>movement</from-outcome>
+            <to-view-id>/views/private/movement.xhtml</to-view-id>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>transfer</from-outcome>
+            <to-view-id>/views/private/transfer.xhtml</to-view-id>
+        </navigation-case>
+        
+        <!-- Errores -->
+        <navigation-case>
+            <from-outcome>error</from-outcome>
+            <to-view-id>/views/public/error.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+</faces-config>

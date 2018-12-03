@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:composite="http://java.sun.com/jsf/composite">
+    
+    <composite:interface>
+        <composite:attribute name="codigo" required="true" />
+        <composite:attribute name="titulo" />
+        <composite:attribute name="descripcion" />
+        <composite:attribute name="color" />
+    </composite:interface>
+    
+    <composite:implementation>
+        <style>
+            .estilo {
+                margin: auto;
+                text-align: center;
+                color: #{ cc.attrs.color };
+                width: 200px;
+                height: 200px;
+                border: 1px solid #{ cc.attrs.color };
+            }
+        </style>
+        <section class="estilo">
+            <h1>#{ cc.attrs.codigo }</h1>
+            <h2>#{ cc.attrs.titulo }</h2>
+            <p>#{ cc.attrs.descripcion }</p>
+        </section>
+    </composite:implementation>
+</html>

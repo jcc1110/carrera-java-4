@@ -1,0 +1,44 @@
+body {
+    background-color: #ffffff;
+    font-size: 12px;
+    font-family: Verdana, "Verdana CE",  Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    color: #000000;  
+    margin: 10px;
+}
+
+h1 {
+    font-family: Arial, "Arial CE", "Lucida Grande CE", lucida, "Helvetica CE", sans-serif;
+    font-size:  16px;
+    font-weight: bold;
+    margin: 0px;
+    padding: 0px;
+}
+
+a:link, a:visited {
+  color: #045491;
+  font-weight : bold;
+  text-decoration: none;
+}
+
+a:link:hover, a:visited:hover  {
+  color: #045491;
+  font-weight : bold;
+  text-decoration : underline;
+}
+
+#top {
+    position: relative;
+    background-color: #C0C0C0;
+    color: black;
+    padding: 5px;
+    margin: 0px 0px 10px 0px;
+    text-align: center;
+}
+
+#bottom {
+    position: relative;
+    background-color: #C0C0C0;
+    padding: 5px;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+}
