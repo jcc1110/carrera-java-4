@@ -27,8 +27,9 @@ public class AutorizacionFilter implements Filter {
             String reqURI = reqt.getRequestURI();
             
             // Validación de datos
-            if (reqURI.contains("/index.xhtml") || 
-                    (ses != null && ses.getAttribute("usuario") != null)) {
+            if (
+                reqURI.contains("/index.xhtml") || 
+                (ses != null && ses.getAttribute("usuario") != null) ) {
                 chain.doFilter(request, response);
             } else {
                 resp.sendRedirect(reqt.getContextPath() + "/faces/index.xhtml");

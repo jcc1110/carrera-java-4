@@ -22,8 +22,8 @@
         <h:form>
             <h:inputText id="txtNombre" value="#{ ub.nombre }">
                 <f:ajax event="keyup" render="txtMensaje" />
-                <f:ajax event="focus" render="txtMensaje" />
-                <f:ajax render="txtMensaje" immediate="true" />
+                <!--<f:ajax event="focus" render="txtMensaje" />-->
+                <!--<f:ajax render="txtMensaje" immediate="true" />-->
             </h:inputText>
             
             <h:commandButton value="Enviar">

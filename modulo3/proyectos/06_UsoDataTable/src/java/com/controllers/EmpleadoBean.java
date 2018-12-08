@@ -14,7 +14,7 @@ public class EmpleadoBean implements Serializable {
     private List<Empleado> lstEmpleados;
     
     public EmpleadoBean() {
-        this.lstEmpleados = new ArrayList<>();        
+        this.lstEmpleados = new ArrayList<>();
         this.lstEmpleados.add(new Empleado("John", "Lopez", "M", 200.89));
         this.lstEmpleados.add(new Empleado("Robert", "Montoya", "M", 300.00));
         this.lstEmpleados.add(new Empleado("Anna", "Zapata", "F", 250.00));

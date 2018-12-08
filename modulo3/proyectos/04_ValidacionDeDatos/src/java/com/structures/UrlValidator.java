@@ -27,7 +27,7 @@ public class UrlValidator implements Validator {
         } catch (ValidatorException e) {            
             // Muestro un mensaje de error personalizado
             FacesMessage msg = new FacesMessage(e.getMessage());
-            msg.setSeverity(FacesMessage.SEVERITY_ERROR);
+            msg.setSeverity(FacesMessage.SEVERITY_FATAL);
             
             // Genero una Exception
             throw new ValidatorException(msg);

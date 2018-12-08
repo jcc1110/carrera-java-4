@@ -6,8 +6,7 @@
     <h:head>
         <title>Validación de Datos</title>
         <style>
-            .formato, 
-            #javax_faces_developmentstage_messages li { 
+            .formato { 
                 color: red !important;
                 margin-left: 3px;
                 border: 1px solid gray;
@@ -46,7 +45,8 @@
             <!-- CORREO -->
             <br/>
             <h:outputLabel value="Correo electrónico: " />
-            <h:inputText id="txtEmail" value="#{ persona.correo }" label="Correo electrónico" 
+            <h:inputText id="txtEmail" value="#{ persona.correo }" 
+                         label="Correo electrónico" 
                          validatorMessage="Correo electrónico inválido">
                 <f:validateRegex pattern="^\S+@\S+.\S+$" />
             </h:inputText>
