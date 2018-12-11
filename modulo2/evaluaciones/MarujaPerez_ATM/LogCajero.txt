@@ -1,0 +1,14 @@
+Dec 10, 2018 8:14:21 PM utils.Utils escribirLog
+INFO: Comenzando la app de cajero automático
+dic 10, 2018 8:14:38 PM utils.Utils escribirLog
+INFORMACIÓN: El cliente con la tarjeta 12345 Se autenticó exitosamente
+dic 10, 2018 8:17:43 PM utils.Utils escribirLog
+INFORMACIÓN: Cerrando Base de Datos atm en Consulta de saldo
+dic 10, 2018 8:17:51 PM utils.Utils escribirLog
+INFORMACIÓN: Cerrando Base de Datos atm en Depositos
+dic 10, 2018 8:18:08 PM utils.Utils escribirLog
+INFORMACIÓN: Cerrando Base de Datos atm en Consulta de saldo
+dic 10, 2018 8:18:08 PM utils.Utils escribirLog
+INFORMACIÓN: Cerrando Base de Datos atm en Retiros
+dic 10, 2018 8:18:11 PM utils.Utils escribirLog
+INFORMACIÓN: Cerrando Base de Datos atm en Consulta de saldo

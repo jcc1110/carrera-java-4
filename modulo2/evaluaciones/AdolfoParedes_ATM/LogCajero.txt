@@ -1,0 +1,8 @@
+dic 10, 2018 8:07:10 PM com.sia_cajero.beans.Log guardarLog
+INFORMACIÓN: Validando usuario
+dic 10, 2018 8:08:55 PM com.sia_cajero.beans.Log guardarLog
+INFORMACIÓN: Validando usuario
+dic 10, 2018 8:09:35 PM com.sia_cajero.beans.Log guardarLog
+INFORMACIÓN: Validando usuario
+dic 10, 2018 8:10:19 PM com.sia_cajero.beans.Log guardarLog
+INFORMACIÓN: Validando usuario
